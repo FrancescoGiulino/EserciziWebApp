@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrizio De André</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Fabrizio De André</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="album.html">Album</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatti.html">Contatti</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="text-center my-5">
+    <h1>Fabrizio De André</h1>
+    <p class="lead">Cantautore italiano, poeta, e simbolo della musica italiana</p>
+</header>
+
+<!-- Biografia e Immagini -->
+<section class="container">
+    <div class="row gy-4">
+        <div class="col-md-4">
+            <!--<img src="images/img_faber.png" alt="Fabrizio De André" class="img-fluid rounded shadow">-->
+            <!-- Carosello -->
+            <div id="deandreCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/img_faber.png" class="carousel-img d-block w-100" alt="Fabrizio De André 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img_faber1.jpg" class="carousel-img d-block w-100" alt="Fabrizio De André 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img_faber2.jpg" class="carousel-img d-block w-100" alt="Fabrizio De André 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#deandreCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#deandreCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-8 d-flex flex-column justify-content-center">
+            <section class="container">
+                <div class="row gy-4">
+                    <!-- Biografia -->
+                    <div class="col-md-12 d-flex flex-column justify-content-center">
+                        <h2>Biografia</h2>
+                        <p><strong>Fabrizio De André</strong>, anche conosciuto come <strong>Faber</strong>, è stato uno dei più importanti cantautori italiani, nato a Genova nel 1940. Con il suo stile poetico e la sua voce inconfondibile, ha narrato storie di emarginati e di vita vera, diventando un’icona della musica italiana.</p>
+                        <p>De André ha pubblicato numerosi album, ognuno dei quali è stato accolto con grande successo e apprezzamento. Alcune delle sue canzoni più celebri includono "<strong>La Canzone di Marinella</strong>", "<strong>Bocca di Rosa</strong>", e "<strong>Amico Fragile</strong>".</p>
+                        <p>Attraverso la sua musica, De André ha affrontato temi sociali complessi come l'ingiustizia, la libertà e l'emarginazione. Le sue canzoni sono spesso caratterizzate da una profonda sensibilità per i più deboli, influenzata anche dal <strong>pensiero anarchico</strong> e dalla cultura popolare.<br>La sua produzione musicale continua a ispirare generazioni di ascoltatori e musicisti.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<div style="height: 40px;"></div> <!-- Elemento vuoto per lo spazio -->
+
+<section class="container">
+    <div class="row">
+        <div class="col-8">
+            <h2>Curiosità</h2>
+            <p>Fabrizio De André nutriva una grande passione per l'agricoltura, che considerava quasi la sua prima attività. Nell'intervista del 1991, racconta come l'<strong>Agnata</strong>, la sua tenuta, sia diventata quasi autosufficiente: produce verdura, salumi, formaggi, olio e latte, allevando mucche e pecore. Descrive anche il processo di raccolta delle olive, con l’intera famiglia coinvolta, e la produzione di olio supervergine. Oltre a dedicarsi alla vita agricola, De André era un <strong>eccellente cuoco</strong> e un <strong>profondo conoscitore di astrologia</strong>, altra sua grande passione.</p>
+        </div>
+        <div class="col-4">
+            <img src="images/img_faber3.jpg" alt="img_faber3" class="img-styled">
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2024 Fabrizio De André Fan Page. Tutti i diritti riservati.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

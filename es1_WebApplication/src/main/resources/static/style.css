@@ -1,0 +1,112 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+* {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Header */
+header h1 {
+    font-size: 52px !important;
+    font-weight: bold;
+    color: #a34;
+}
+
+header p {
+    font-size: 18px !important;
+    color: #6c757d;
+}
+
+section h2 {
+    font-size: 32px !important;
+    font-weight: bold;
+    color: #a34;
+}
+
+section p {
+    font-size: 18px !important;
+    line-height: 1.6;
+}
+
+section p strong{
+    font-size: 18px !important;
+    line-height: 1.6;
+    color: #850a36;
+}
+
+footer p {
+    margin: 0;
+    font-size: 18px !important;
+    color: #aaa;
+}
+
+/* Dimensioni fisse per il carosello */
+#deandreCarousel {
+    max-width: 600px; /* Larghezza massima */
+    max-height: 400px; /* Altezza massima */
+    overflow: hidden;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+/* Adattamento delle immagini */
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenuto principale */
+main {
+    flex:1 !important;
+}
+
+.album-form {
+    max-width: 600px;
+    background-color: #f9f9f9; /* Colore di sfondo chiaro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    padding: 20px;
+}
+
+.album-form .form-label {
+    font-weight: bold;
+    color: #343a40; /* Colore scuro per i label */
+}
+
+.album-form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.album-form .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff; /* Colore primario */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.album-form .btn:hover {
+    background-color: #0056b3; /* Colore scuro al passaggio del mouse */
+}
+
+.img-styled {
+    border-radius: 6px; /* Arrotonda i bordi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra leggera */
+    max-width: 100%; /* Assicura che l'immagine si adatti al contenitore */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+/* Footer */
+footer {
+    background-color: #212529; /* Colore di sfondo */
+}

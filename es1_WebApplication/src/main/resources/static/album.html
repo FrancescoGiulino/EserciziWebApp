@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Fabrizio De André - Album</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Fabrizio De André</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="album.html">Album</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contatti.html">Contatti</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="text-center my-5">
+  <h1>Album</h1>
+  <p class="lead">Elenco dei migliori album di Faber</p>
+</header>
+
+<div style="height: 20px;"></div> <!-- Elemento vuoto per lo spazio -->
+
+<table class="table table-hover" id="album_table">
+  <thead class="table table-light">
+  <tr>
+    <th>Nome Album</th>
+    <th>Anno</th>
+    <th>Numero canzoni</th>
+    <th>Azione</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Vol. 1°</td>
+    <td>1967</td>
+    <td>10</td>
+    <td><button class="btn btn-danger btn-sm deleteButton">Rimuovi<i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+  <tr>
+    <td>Non al denaro, non all'amore né al cielo</td>
+    <td>1971</td>
+    <td>9</td>
+    <td><button class="btn btn-danger btn-sm deleteButton">Rimuovi<i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+  <tr>
+    <td>Storia di un impiegato</td>
+    <td>1973</td>
+    <td>9</td>
+    <td><button class="btn btn-danger btn-sm deleteButton">Rimuovi<i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+  <tr>
+    <td>Vol. 3°</td>
+    <td>1968</td>
+    <td>10</td>
+    <td><button class="btn btn-danger btn-sm deleteButton">Rimuovi<i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+  <tr>
+    <td>La buona novella</td>
+    <td>1970</td>
+    <td>11</td>
+    <td><button class="btn btn-danger btn-sm deleteButton">Rimuovi<i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="album-form container py-3">
+  <div class="row mb-3 align-items-center">
+    <div class="col-md-3"><label for="input_titolo" class="form-label">Inserire titolo:</label></div>
+    <div class="col-md-9"><input type="text" id="input_titolo" class="form-control" placeholder="Titolo"></div>
+  </div>
+  <div class="row mb-3 align-items-center">
+    <div class="col-md-3"><label for="input_anno" class="form-label">Inserire anno:</label></div>
+    <div class="col-md-9"><input type="text" id="input_anno" class="form-control" placeholder="Anno"></div>
+  </div>
+  <div class="row mb-3 align-items-center">
+    <div class="col-md-3"><label for="input_ncanzoni" class="form-label">Inserire n° canzoni:</label></div>
+    <div class="col-md-9"><input type="text" id="input_ncanzoni" class="form-control" placeholder="N° Canzoni"></div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-end"><button type="button" id="submit_button" class="btn btn-primary">Inserisci album</button></div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  <p class="mb-0">© 2024 Fabrizio De André Fan Page. Tutti i diritti riservati.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
