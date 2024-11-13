@@ -1,0 +1,120 @@
+/* Impostazioni generali */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* Navbar (se c'è) */
+nav {
+    background-color: #333;
+    padding: 10px;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Tabella */
+#tabella-ristoranti {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#tabella-ristoranti th, #tabella-ristoranti td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabella-ristoranti th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+}
+
+#tabella-ristoranti td {
+    font-size: 1em;
+    color: #333;
+}
+
+#tabella-ristoranti tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Form per aggiungere un ristorante */
+form {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input[type="button"], form input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+form input[type="button"]:hover, form input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    form {
+        width: 80%;
+    }
+
+    #tabella-ristoranti {
+        width: 90%;
+    }
+}
