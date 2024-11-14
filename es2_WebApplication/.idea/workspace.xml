@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6859f96-7a79-40f3-9417-5cb2e7f6d1dc" name="Changes" comment="" />
+    <list default="true" id="b6859f96-7a79-40f3-9417-5cb2e7f6d1dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/PiattoProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistorantePiattoProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/controller/GestioneRistorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/controller/GestioneRistorante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/PiattoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/PiattoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistoranteDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistoranteDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistorantePiattoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistorantePiattoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/gestioneRistoranti.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/gestioneRistoranti.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/controller/GestioneRistorante.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/controller/GestioneRistorante.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/persistence/dao/impljdbc/PiattoDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/persistence/dao/impljdbc/PiattoDaoJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistoranteDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistoranteDaoJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistorantePiattoDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dipartimento/demowebapplications/persistence/dao/impljdbc/RistorantePiattoDaoJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/gestioneRistoranti.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/gestioneRistoranti.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +36,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -60,7 +75,7 @@
     &quot;Spring Boot.DemoWebApplicationsApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kristian/git/WebApplicationsCourse/DemoWebApp2024/src/main/resources/static&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/franc/OneDrive/Desktop/Università/WebApplication/EserciziWebApp/es2_WebApplication&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -206,6 +221,10 @@
       <workItem from="1731431163253" duration="109000" />
       <workItem from="1731433362954" duration="540000" />
       <workItem from="1731494862944" duration="120000" />
+      <workItem from="1731495156079" duration="75000" />
+      <workItem from="1731516431896" duration="184000" />
+      <workItem from="1731517827618" duration="2624000" />
+      <workItem from="1731581538049" duration="2162000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

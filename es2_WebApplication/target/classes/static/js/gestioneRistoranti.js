@@ -16,8 +16,9 @@ function aggiungiRistorante() {
 
     $.ajax({
         url: "/addRistorante", //URL dell'endpoint che aggiunge il ristorante
-        type: "GET", //metodo HTTP
-        data: ristorante, //dati del ristorante da aggiungere
+        type: "POST", // Cambia il metodo a POST
+        contentType: "application/json", // Imposta il tipo di contenuto come JSON
+        data: JSON.stringify(ristorante), // Invia i dati come stringa JSON
         success: function(response) {
             console.log("Ristorante aggiunto con successo");
             aggiornaTabellaRistoranti(); //aggiorna la lista dei ristoranti
@@ -28,6 +29,7 @@ function aggiungiRistorante() {
     });
 }
 
+
 $(document).ready(function() {
     aggiornaTabellaRistoranti(); //carica i ristoranti appena la pagina è pronta
 });
@@ -36,8 +38,9 @@ $(document).ready(function() {
 function aggiornaTabellaRistoranti() {
     $.ajax({
         url: "/elencoRistoranti", //URL dell'endpoint per ottenere tutti i ristoranti
-        type: "GET", //metodo HTTP
+        type: "GET", // Metodo HTTP
         success: function(response) {
+            console.log(response); // Aggiungi questo per vedere cosa restituisce il server
             //pulisci la tabella esistente
             var tbody = document.querySelector("#tabella-ristoranti tbody");
             tbody.innerHTML = ""; // Rimuove tutte le righe esistenti

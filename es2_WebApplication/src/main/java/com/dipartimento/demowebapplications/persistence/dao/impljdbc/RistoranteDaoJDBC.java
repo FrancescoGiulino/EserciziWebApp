@@ -19,27 +19,23 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 
     @Override
     public List<Ristorante> findAll() {
-        List<Ristorante> ristoranti = new ArrayList<Ristorante>();
-        String query = "select * from ristorante";
-
-        System.out.println("going to execute:"+query);
-
-        Statement st = null;
-        try {
-            st = connection.createStatement();
-            ResultSet rs = st.executeQuery(query);
-            while (rs.next()){
-                Ristorante rist = new RistoranteProxy();
-                rist.setNome(rs.getString("nome"));
-                rist.setDescrizione(rs.getString("descrizione"));
-                rist.setUbicazione(rs.getString("ubicazione"));
-                ristoranti.add(rist);
+        List<Ristorante> ristoranti = new ArrayList<>();
+        String query = "SELECT * FROM ristorante";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Ristorante ristorante = new Ristorante();
+                ristorante.setNome(resultSet.getString("nome"));
+                ristorante.setDescrizione(resultSet.getString("descrizione"));
+                ristorante.setUbicazione(resultSet.getString("ubicazione"));
+                ristoranti.add(ristorante);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return ristoranti;
     }
+
 
     @Override
     public Ristorante findByPrimaryKey(String nome) {
@@ -89,10 +85,6 @@ public class RistoranteDaoJDBC implements RistoranteDao {
                 pd.save(tempP);
                 insertJoinRistorantePiatto(connection , ristorante.getNome() , tempP.getNome());
             }
-
-
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -125,7 +117,43 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 
     @Override
     public void delete(Ristorante ristorante) {
+        String deleteJoinQuery = "DELETE FROM ristorante_piatto WHERE ristorante_nome = ?";
+        String deleteRistoranteQuery = "DELETE FROM ristorante WHERE nome = ?";
 
+        try {
+            // Iniziamo una transazione
+            connection.setAutoCommit(false);
+
+            //seguiamo i seguenti passi:
+            //1. rimuovere tutte le relazioni nella tabella di join `ristorante_piatto`
+            try (PreparedStatement statementJoin = connection.prepareStatement(deleteJoinQuery)) {
+                statementJoin.setString(1, ristorante.getNome());
+                statementJoin.executeUpdate();
+            }
+
+            //2. rimuovere il ristorante dalla tabella `ristorante`
+            try (PreparedStatement statementRistorante = connection.prepareStatement(deleteRistoranteQuery)) {
+                statementRistorante.setString(1, ristorante.getNome());
+                statementRistorante.executeUpdate();
+            }
+
+            //confermiamo la transazione
+            connection.commit();
+        } catch (SQLException e) {
+            //rollback in caso di errore
+            try {
+                connection.rollback();
+            } catch (SQLException rollbackEx) {
+                rollbackEx.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static void main(String[] args) {
