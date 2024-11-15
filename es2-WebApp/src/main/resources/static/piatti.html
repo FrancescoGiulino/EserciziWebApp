@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Piatti</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <h1><a href="index.html">Gestione Ristoranti</a></h1>
+  <ul>
+    <li><a href="ristoranti.html">Ristoranti</a></li>
+    <li><a href="piatti.html">Piatti</a></li>
+  </ul>
+</nav>
+
+<!-- Sezione Piatti -->
+<section class="content-section">
+  <h2>Piatti</h2>
+  <!-- Tabella Piatti -->
+  <table id="piattiTable">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Descrizione</th>
+      <th>Azioni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Contenuto Popolato da JavaScript -->
+    </tbody>
+  </table>
+
+  <!-- Form per Aggiungere un Piatto -->
+  <form id="addPiattoForm">
+    <h3>Aggiungi Piatto</h3>
+    <input type="text" id="nomePiatto" placeholder="Nome" required>
+    <input type="text" id="descrizionePiatto" placeholder="Descrizione" required>
+    <button type="button" onclick="addPiatto()">Aggiungi Piatto</button>
+  </form>
+</section>
+
+<script src="script-piatti.js"></script>
+</body>
+</html>

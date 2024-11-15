@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Ristoranti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <h1><a href="index.html">Gestione Ristoranti</a></h1>
+    <ul>
+        <li><a href="ristoranti.html">Ristoranti</a></li>
+        <li><a href="piatti.html">Piatti</a></li>
+    </ul>
+</nav>
+
+<!-- Sezione Ristoranti -->
+<section class="content-section">
+    <h2>Ristoranti</h2>
+    <!-- Tabella Ristoranti -->
+    <table id="ristorantiTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Ubicazione</th>
+            <th>Piatti Associati</th>
+            <th>Azioni</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Contenuto Popolato da JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Form per Aggiungere un Ristorante -->
+    <form id="addRistoranteForm">
+        <h3>Aggiungi Ristorante</h3>
+        <input type="text" id="nomeRistorante" placeholder="Nome" required>
+        <input type="text" id="descrizioneRistorante" placeholder="Descrizione" required>
+        <input type="text" id="ubicazioneRistorante" placeholder="Ubicazione" required>
+        <button type="button" onclick="addRistorante()">Aggiungi Ristorante</button>
+    </form>
+
+    <!-- Form per Collegare un Piatto a un Ristorante -->
+    <form id="linkPiattoForm">
+        <h3>Associa Piatto a Ristorante</h3>
+        <select id="ristoranteSelect" required>
+            <option value="">Seleziona Ristorante</option>
+        </select>
+        <select id="piattoSelect" required>
+            <option value="">Seleziona Piatto</option>
+        </select>
+        <button type="button" onclick="linkPiattoToRistorante()">Associa Piatto</button>
+    </form>
+
+    <!-- Form per Eliminare un Piatto da un Ristorante -->
+    <form id="removePiattoForm">
+        <h3>Elimina Piatto da Ristorante</h3>
+        <select id="ristoranteRemoveSelect" required onchange="populatePiattoRemoveDropdown()">
+            <option value="">Seleziona Ristorante</option>
+        </select>
+        <select id="piattoRemoveSelect" required>
+            <option value="">Seleziona Piatto</option>
+        </select>
+        <button type="button" onclick="removePiattoFromRistorante()">Elimina Piatto</button>
+    </form>
+</section>
+
+<script src="script-ristoranti.js"></script>
+<script src="script-piatti.js"></script>
+</body>
+</html>
